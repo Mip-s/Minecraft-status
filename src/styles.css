@@ -109,3 +109,4 @@ td { padding: 8px; border-bottom: 1px solid color-mix(in srgb, var(--border) 60%
   .top .btn-row .btn, .top > .btn { flex: 1; }
   th:last-child, td:last-child { display: none; }
 }
+.brand-icon { image-rendering: pixelated; border-radius: 6px; }

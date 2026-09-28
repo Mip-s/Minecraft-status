@@ -236,7 +236,7 @@ export default function App() {
     <div className="app">
       <header className="top">
         <div className="brand">
-          <img src="/icon.svg" alt="" width="32" height="32" />
+          <img className="brand-icon" src="/icon.png" alt="" width="32" height="32" />
           <div>
             <h1>Server Monitor</h1>
             <MonitorPill status={d.status} live={d.live} now={now} />
