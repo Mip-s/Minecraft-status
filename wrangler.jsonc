@@ -15,7 +15,7 @@
   "vars": {
     "SUPABASE_URL": "https://cpqwcygfafnuszgdpqnx.supabase.co",
     "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_VW7Nw5jByURyV2sJ4faKQA_yXWkYQml",
-    "DISCORD_CHANNEL_ID": "PUT_CHANNEL_ID_HERE",
+    "DISCORD_CHANNEL_ID": "1336626181583147018",
     // Optional: comma-separated Discord user/webhook IDs allowed to post join/leave lines
     // (stops players faking "X joined the server" in chat). Leave empty to accept all.
     "SOURCE_AUTHOR_IDS": "",
