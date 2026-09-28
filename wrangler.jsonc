@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "minecraft-monitor",
+  "name": "minecraft-status",
+  "workers_dev": true,
   "main": "worker/index.js",
   "compatibility_date": "2026-09-01",
   "assets": {
@@ -21,7 +22,7 @@
     "SOURCE_AUTHOR_IDS": "",
     "POLLS_PER_RUN": "2",
     "VAPID_PUBLIC_KEY": "BEsFH28vBlGClDVz9WqgQEqEw60Z0OdIkcrCaQE756IK52NE3x_yJ9GSSdJAX8JOFPXNS9pQryMMd2UGut2bl6Q",
-    "VAPID_SUBJECT": "https://minecraft-monitor.fazdagroll.workers.dev"
+    "VAPID_SUBJECT": "https://minecraft-status.fazdagroll.workers.dev"
   }
   // Secrets (set in Cloudflare dashboard > Worker > Settings > Variables and Secrets, type "Secret"):
   //   DISCORD_BOT_TOKEN, SUPABASE_SERVICE_ROLE_KEY, VAPID_PRIVATE_KEY

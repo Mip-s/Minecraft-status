@@ -6,7 +6,7 @@ Public dashboard + phone alerts for who joins/leaves the server.
 Minecraft (AMP, Hetzner) ──SDLink──▶ Discord channel
                                          │  (Worker cron polls every ~30 s)
                                          ▼
-                   Cloudflare Worker "minecraft-monitor"
+                   Cloudflare Worker "minecraft-status"
                      ├─ parses "X has joined/left the server!"
                      ├─ writes to Supabase (record_event)
                      ├─ sends Web Push to subscribed phones
