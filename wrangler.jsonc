@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "minecraft-monitor",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  // Polls the Discord channel every minute (POLLS_PER_RUN checks per minute).
+  "triggers": { "crons": ["* * * * *"] },
+  "observability": { "enabled": true },
+  "vars": {
+    "SUPABASE_URL": "https://cpqwcygfafnuszgdpqnx.supabase.co",
+    "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_VW7Nw5jByURyV2sJ4faKQA_yXWkYQml",
+    "DISCORD_CHANNEL_ID": "PUT_CHANNEL_ID_HERE",
+    // Optional: comma-separated Discord user/webhook IDs allowed to post join/leave lines
+    // (stops players faking "X joined the server" in chat). Leave empty to accept all.
+    "SOURCE_AUTHOR_IDS": "",
+    "POLLS_PER_RUN": "2",
+    "VAPID_PUBLIC_KEY": "BEsFH28vBlGClDVz9WqgQEqEw60Z0OdIkcrCaQE756IK52NE3x_yJ9GSSdJAX8JOFPXNS9pQryMMd2UGut2bl6Q",
+    "VAPID_SUBJECT": "https://minecraft-monitor.fazdagroll.workers.dev"
+  }
+  // Secrets (set in Cloudflare dashboard > Worker > Settings > Variables and Secrets, type "Secret"):
+  //   DISCORD_BOT_TOKEN, SUPABASE_SERVICE_ROLE_KEY, VAPID_PRIVATE_KEY
+}
